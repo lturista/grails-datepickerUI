@@ -16,7 +16,10 @@ Setup:
 - put this class in your grails-app/tablib folder
 
 Example: 
-	<g:datepickerUI name="myDate" required="true" value="${myDomainClass?.myDate?:new Date()}" options="{minDate:'0', maxDate:'+10Y'}" class="form-control"/>
+```html
+<g:datepickerUI name="myDate" required="true" value="${myDomainClass?.myDate?:new Date()}" options="{minDate:'0', maxDate:'+10Y'}" class="form-control"/>
+```
+
 
 Tested with:
 - JQuery-1.11.1
