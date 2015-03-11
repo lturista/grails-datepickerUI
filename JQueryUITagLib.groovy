@@ -79,9 +79,9 @@ class JQueryUITagLib {
 			 \$('#${namePicker}').datepicker('option',\$.datepicker.regional['${locale}']);\n\
 			 \$('#${namePicker}').datepicker('option', 'onClose', function(){\n\
 				 selDate = \$('#${namePicker}').datepicker('getDate');\n\
-				 \$('#${nameDay}').val(selDate?selDate.getDate():'');\n\
-				 \$('#${nameMonth}').val(selDate?selDate.getMonth()+1:'');\n\
-				 \$('#${nameYear}').val(selDate?selDate.getFullYear():'');\n\
+				 \$('#${nameDay}').val(selDate?selDate.getDate():null);\n\
+				 \$('#${nameMonth}').val(selDate?selDate.getMonth()+1:null);\n\
+				 \$('#${nameYear}').val(selDate?selDate.getFullYear():null);\n\
 			 });\n\
 			 var dateFormat = \$('#${namePicker}').datepicker( 'option', 'dateFormat');\n\
          "

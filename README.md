@@ -1,5 +1,8 @@
 # grails-datepickerUI
-Version 0.1 - 27/02/2014
+Version 0.2 - 11/03/2015 - CHANGELOG
+* Fixed value for empty selection (null)
+
+Version 0.1 - 27/02/2015
 
 A datepicker based on JQuery datepicker (http://jqueryui.com/datepicker/) and (mostly) compatible with the Grails framework
 
