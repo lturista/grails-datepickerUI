@@ -39,6 +39,7 @@ class JQueryUITagLib {
 		def locale = attrs['locale']?:RCU.getLocale(request).toString().substring(0,2)
 		def htmlClass = attrs['class']
 		def htmlRequired = attrs['required']?"required = 'true'":''
+		def placeholder = attrs['placeholder']?:''
 		
 		def namePicker = name+"_picker";
 		def nameDay = name+"_day";
@@ -62,7 +63,7 @@ class JQueryUITagLib {
 		}
 
 		out << "\
-		<input type='text' id='${namePicker}' name='${namePicker}' class='${htmlClass}' ${htmlRequired} />\
+		<input type='text' id='${namePicker}' name='${namePicker}' placeholder='${placeholder}' class='${htmlClass}' ${htmlRequired} style='position: relative; z-index:100;'/>\
         \
 		\
 		<input type='hidden' id='${name}' name='${name}' value='date.struct' />\
@@ -77,7 +78,7 @@ class JQueryUITagLib {
          \$(document).ready(function(){\n\
 			 \$('#${namePicker}').datepicker(${options});\n\
 			 \$('#${namePicker}').datepicker('option',\$.datepicker.regional['${locale}']);\n\
-			 \$('#${namePicker}').datepicker('option', 'onClose', function(){\n\
+			 \$('#${namePicker}').on('change', function(){\n\
 				 selDate = \$('#${namePicker}').datepicker('getDate');\n\
 				 \$('#${nameDay}').val(selDate?selDate.getDate():null);\n\
 				 \$('#${nameMonth}').val(selDate?selDate.getMonth()+1:null);\n\

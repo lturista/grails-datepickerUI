@@ -1,8 +1,14 @@
 # grails-datepickerUI
-Version 0.2 - 11/03/2015 - CHANGELOG
-* Fixed value for empty selection (null)
+Version 0.3 - 11/09/2015 - CHANGELOG
+* Added support for the placeholder parameter
+
+Version 0.2 - 12/03/2015 - CHANGELOG
+* Fixed value for empty selection (null) - this check happens on the "change" event of the text field
+* Added styling to solve a z-index-related issue: now calendar should always be displayed on top of all elements
 
 Version 0.1 - 27/02/2015
+
+---
 
 A datepicker based on JQuery datepicker (http://jqueryui.com/datepicker/) and (mostly) compatible with the Grails framework
 
